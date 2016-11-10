@@ -13,6 +13,10 @@
 
 {!! print_r(get_class_methods($errors)) !!}
 <br />
+{!! var_dump($errors->all()) !!}
+
+{!! Form::open(['url' => 'form']) !!}
+{!! Form::text('username') !!}
 
 
 {!! Form::open(['url' => 'form']) !!}

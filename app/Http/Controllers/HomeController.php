@@ -23,12 +23,10 @@ class HomeController extends Controller {
         // hasMany
 //        $res = ExampleUsers::all()->paginate(1);
 //        $users = $res;
-        
 //      Use pagination
         $res = ExampleUsers::paginate(1);
         $users = $res;
 //        print_r($this);
-        
         // Session handling
         $request->session()->put('name', 'value');
         $request->session()->get('name');
@@ -42,7 +40,6 @@ class HomeController extends Controller {
 //            'username' => 'required|string|max:255',
 //            'animal' => 'required|string|max:255',
 //        ]);
-        
 // It is the preferred method because it allows access to each single error report (see about.blade)
         $validator = Validator::make($request->all(), [
                     'username' => 'required|string|max:255',
